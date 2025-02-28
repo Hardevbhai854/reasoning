@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Material Hub</title>
+
+    <!-- ✅ SEO के लिए Meta Tags -->
+    <meta name="description" content="Study Material Hub - Free reasoning questions and learning resources.">
+    <meta name="keywords" content="study material, reasoning questions, online learning, education">
+    <meta name="author" content="Hardev Singh">
+    <meta name="robots" content="index, follow">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -46,7 +52,26 @@
         .contact-us a:hover {
             text-decoration: underline;
         }
+        .lastmod-section {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ffeb3b;
+        }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let today = new Date();
+            let formattedDate = today.getFullYear() + "-" + 
+                                ("0" + (today.getMonth() + 1)).slice(-2) + "-" + 
+                                ("0" + today.getDate()).slice(-2);
+            
+            let lastmodElement = document.getElementById("lastmod");
+            if (lastmodElement) {
+                lastmodElement.textContent = formattedDate;
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -82,21 +107,7 @@
             <p>📧 Contact Us: <a href="mailto:singhhardev40682@gmail.com">singhhardev40682@gmail.com</a></p>
         </div>
     </footer>
+    
+    <p class="lastmod-section">📅 Last Updated: <span id="lastmod"></span></p>
 </body>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        let today = new Date();
-        let formattedDate = today.getFullYear() + "-" + 
-                            ("0" + (today.getMonth() + 1)).slice(-2) + "-" + 
-                            ("0" + today.getDate()).slice(-2);
-        
-        // पेज पर Last Updated Date दिखाने के लिए
-        let lastmodElement = document.getElementById("lastmod");
-        if (lastmodElement) {
-            lastmodElement.textContent = formattedDate;
-        }
-    });
-</script>
-
-<p>📅 Last Updated: <span id="lastmod"></span></p>
 </html>
