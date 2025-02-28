@@ -83,4 +83,20 @@
         </div>
     </footer>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let today = new Date();
+        let formattedDate = today.getFullYear() + "-" + 
+                            ("0" + (today.getMonth() + 1)).slice(-2) + "-" + 
+                            ("0" + today.getDate()).slice(-2);
+        
+        // पेज पर Last Updated Date दिखाने के लिए
+        let lastmodElement = document.getElementById("lastmod");
+        if (lastmodElement) {
+            lastmodElement.textContent = formattedDate;
+        }
+    });
+</script>
+
+<p>📅 Last Updated: <span id="lastmod"></span></p>
 </html>
